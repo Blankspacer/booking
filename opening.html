@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Blankspacer - online booking system</title>
+<style>
+  /* CSS for logo animation */
+  @keyframes logoAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  .logo {
+    animation: logoAnimation 2s infinite;
+  }
+
+  /* CSS for the page layout */
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .content {
+    text-align: center;
+  }
+</style>
+</head>
+<body background="logo.gif">
+
+<div class="content">
+  <!-- Logo animation -->
+  <img class="logo" src="logo.gif" alt="Logo">
+  
+  <p>Redirecting in <span id="countdown">8</span> seconds...</p>
+</div>
+
+<script>
+  // Countdown timer for redirection
+  var countdown = 8;
+  var countdownDisplay = document.getElementById('countdown');
+
+  // Update the countdown display every second
+  var countdownInterval = setInterval(function() {
+    countdown--;
+    countdownDisplay.textContent = countdown;
+    if (countdown <= 0) {
+      clearInterval(countdownInterval); // Stop the countdown
+      window.location.href = 'index.html'; // Redirect to another page
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>

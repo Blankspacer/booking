@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLS Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+  .captcha {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #captchaInput {
+    margin-bottom: 10px;
+  }
+</style>
+	</head>
+<body background="360_F_298262541_C00TYNMeuj9i5Qq6rdQBzA2lSOBesdLu.jpg" style="background-blend-mode: soft-light">
+    <div class="container">
+        <h1 align="center"><img src="blank-spacer-logo - Copy.png"> Booking System</h1>
+        <form action="submit_booking.php" method="post">
+		
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+			
+			<label for="name">Name of client:</label>
+            <input type="name" id="name" name="name" required><br><br>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <label for="room_type">Room Type:</label>
+            <select id="room_type" name="room_type" required>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+            </select><br>
+
+            <label for="consultant">Consultant:</label>
+            <select id="consultant" name="consultant" required>
+                <option value="ALEX">Mr. Alex</option>
+                <option value="ROKSANA">Ms. Roksana</option>
+                <option value="NAZIA">Miss Nazia</option>
+				<option value="SAMIRA">Miss Samira</option>
+				<option value="WAJIHA">Miss Wajiha</option>
+            </select><br>
+
+            <label for="duration">Duration of Stay:(days)</label>
+            <input type="number" id="duration" name="duration" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required><br>
+
+            <label for="phone">Phone No:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="extra_facilities">Extra Facilities:(mention in the box if needed)</label>
+            <textarea id="extra_facilities" name="extra_facilities"></textarea><br>
+
+            
+		
+		<div class="captcha">
+  <form action="captcha.php" method="post">
+    <label for="captchaInput">Please verify that you're human:</label><br>
+    <input type="text" id="captchaInput" name="captchaInput" placeholder="Enter CAPTCHA"><br>
+    <img src="captcha.php" alt="CAPTCHA Image"><br><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+</div>
+</body>
+</html>
